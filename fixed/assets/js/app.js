@@ -30,14 +30,14 @@ const userGPS = document.querySelector('.location');
     .then(res=>res.json())
     .then(data=>{
       // Si se recibe un json con un mensaje de "Not Found" mostramos un error en consola y en el DOM
-      if(data.message="Not Found"){
+       if(data.message=="Not Found"){
         console.error("Error 404: Usuario no encontrado.");
         usernameDOMLocation.textContent = `Error 404: Usuario "${username}" no encontrado.`;
-      } else{
+      } else{ 
         // Si no se recibe este mensaje de error en el JSON, se procede a asignar el texto a los elementos
-      usernameDOMLocation.textContent = data.name;
-      blog.textContent = data.blog;
-      userGPS.textContent = data.location;
+      usernameDOMLocation.textContent = "Nombre: " + data.name;
+      blog.textContent += data.blog;
+      userGPS.textContent += data.location;
       }
     })
     // Si el fetch no obtuvo alguna respuesta, se genera este error, se muestra en consola y en el dom por medio de la funcion "handleError"
@@ -54,7 +54,7 @@ function handleError(err) {
   usernameDOMLocation.textContent = `Algo salió mal: ${err}`;
 } 
 
-displayUser('rafaelesadncinasr');
+displayUser('rafaelencinasr');
 
 
 

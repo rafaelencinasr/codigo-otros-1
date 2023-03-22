@@ -1,0 +1,32 @@
+  Descripcion del funcionamiento del programa:
+
+  Este programa lo que hace es realizar un llamado fetch a la API REST de Github.
+  Especificamente busca obtener el "blog" y la "location" de un usuario.
+  En caso de recibir un error en el fetch, (con catch) se muestra un error en consola y en el DOM,
+  y en caso de recibir una respuesta 404 "Not Found" tambien se muestra un error.
+
+  Si el usuario existe, se recibe su "blog" y "location", y se muestra en el DOM. 
+
+Por parte del script:
+
+    Como salida se esperaba mostrar los datos del usuario en el DOM, sin embargo los nombres de las variables,
+    la implementacion del fetch, catch, y como se seleccionaban las ubicaciones de los elementos tenian errores.
+
+    Para solucionarlo se podria:
+        - implementar una mejor documentacion por medio de comentarios
+        - utilizar nombres de variables mas apropiados y que nos den un mejor contexto
+        - utilizar el .then y .catch en el fetch para trabajar correctamente con la respuesta que se recibe
+        - mejorar los mensajes de errores para que se muestre que fue lo que salio mal, no solo mencionar que hubo un error
+        -  
+
+Por parte del HTML
+
+    Las referencias a las hojas de estilos y al script estaban mal definidas, y hacia falta un elemento para ingresar la
+    "location" que recibiamos de la API.
+
+    Para solucionarlo se podria:
+        - utilizar correctamente las referencias relativas para las hojas de estilos y los scripts
+        - crear correctamente los elementos que se necesitan (un  elemento p con clase location)
+
+De igual forma, se utilizan etiquetas "p" en lugar de algunas otras que podrian ser mas apropiadas como las h1, h2, h3, etc.
+Pero esto ya es mas una decision de la persona encargada del diseño de la pagina.

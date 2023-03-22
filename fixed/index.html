@@ -1,0 +1,33 @@
+<!-- 
+
+    Descripcion del funcionamiento del programa:
+
+  Este programa lo que hace es realizar un llamado fetch a la API REST de Github.
+  Especificamente busca obtener el "blog" y la "location" de un usuario.
+  En caso de recibir un error en el fetch, (con catch) se muestra un error en consola y en el DOM,
+  y en caso de recibir una respuesta 404 "Not Found" tambien se muestra un error.
+
+  Si el usuario existe, se recibe su "blog" y "location", y se muestra en el DOM. 
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- La referencia a la hoja de estilos no esta bien, faltaba un nivel del directorio -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>APIs fixed</title>
+</head>
+<body>
+    <p class="username"></p>
+    <p class="blog"></p>
+    <p class="location"></p>
+
+<!-- La referencia se hacia a un directorio padre -->
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
+
